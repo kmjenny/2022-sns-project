@@ -14,7 +14,7 @@ def show_page(request):
 
 def detail(request,id):
     post = get_object_or_404(Post, pk=id)
-    return render(request, 'main/detail.html',{'post':post_mortem})
+    return render(request, 'main/detail.html',{'post':post})
 
 def new(request):
     return render(request, 'main/new.html')
