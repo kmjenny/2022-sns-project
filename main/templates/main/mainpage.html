@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <a href="{% url 'showpage' %}">자기소개 페이지</a>
-<h2><a href="{%url 'new'%}">글쓰기</a></h2>
+    <a href="{% url 'main:showpage' %}">자기소개 페이지</a>
+<h2><a href="{%url 'main:new'%}">글쓰기</a></h2>
 
 <h1>글 목록</h1>
 <div>
@@ -11,7 +11,7 @@
         <h3>{{post.title}}</h3>
         {{post.writer}}<br>
         {{post.summary}}
-        <a href="{%url 'detail' post.id %}">...자세히</a>
+        <a href="{%url 'main:detail' post.id %}">...자세히</a>
         <br>
     </div>
     {%endfor%}
