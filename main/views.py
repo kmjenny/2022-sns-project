@@ -72,4 +72,4 @@ def delete_comment(request, id):
 
 def edit_comment(request, id):
     edit_comment = Comment.objects.get(id = id)
-    return render(request, 'main/cm_edit.html', {'edit_comment' : edit_comment})
+    return render(request, 'main/cm_edit.html', {'comment' : edit_comment})
