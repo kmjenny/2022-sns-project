@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'users',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,4 @@ AUTHENTICATION_BACKENDS=[
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_VERIFICATION='none'

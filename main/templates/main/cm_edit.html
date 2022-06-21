@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<form action="{% url 'main:comment_update' comment.id %}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <textarea name="content" placeholder="댓글내용수정"></textarea>
+    <p>내용 : <input type="submit" value="{{comment.content}}"></p>
+    <button type="submit">수정 완료하기</button>
+</form>
+
+{% endblock %}
