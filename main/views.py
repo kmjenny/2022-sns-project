@@ -57,19 +57,20 @@ def create_comment(request, post_id):
     new_comment.save() 
     return redirect('main:detail', post_id)
 
-def update_comment(request, id):
-    update_comment = Comment.objects.get(id = id)
-    update_comment.writer = request.user
+def update_comment(request, post_id, comment_id):
+    post = Post.objects.get(id=post_id)
+    update_comment = Comment.objects.get(id = comment_id)
     update_comment.content = request.POST['content']
-    update_comment.blog = get_object_or_404(Post, pk=id)
     update_comment.save()
-    return redirect('main:detail', update_comment.id)
+    return redirect('main:detail', post.id)
 
-def delete_comment(request, id):
-    delete_comment = Comment.objects.get(id=id)
+def delete_comment(request, post_id, comment_id):
+    post = Post.objects.get(id = post_id)
+    delete_comment = Comment.objects.get(id=comment_id)
     delete_comment.delete()
-    return redirect('main:showmain')
+    return redirect('main:detail', post.id)
 
-def edit_comment(request, id):
-    edit_comment = Comment.objects.get(id = id)
-    return render(request, 'main/cm_edit.html', {'comment' : edit_comment})
+def edit_comment(request, post_id, comment_id):
+    post = Post.objects.get(id = post_id)
+    edit_comment = Comment.objects.get(id = comment_id)
+    return render(request, 'main/cm_edit.html', {'post':post, 'comment' : edit_comment})

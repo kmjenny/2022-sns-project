@@ -3,9 +3,9 @@
 
 {% block content %}
 
-<form action="{% url 'main:update_comment' comment.id %}" method="post" enctype="multipart/form-data">
+<form action="{% url 'main:update_comment' post.id comment.id %}" method="post" enctype="multipart/form-data">
     {%csrf_token%}
-    <textarea name="content" placeholder="댓글내용수정" value="{{comment.content}}"></textarea>
+    <textarea name="content" placeholder="댓글내용수정">{{comment.content}}</textarea>
     <button type="submit">수정 완료하기</button>
 </form>
 

@@ -38,8 +38,8 @@
         작성자 : {{comment.writer}}
         {{comment.content}}
         <br>
-        <a href="{% url 'main:edit_comment' comment.id%}">댓글 수정하기</a>
-        <a href="{% url 'main:delete_comment' comment.id%}">댓글 삭제하기</a>
+        <a href="{% url 'main:edit_comment' post.id comment.id%}">댓글 수정하기</a>
+        <a href="{% url 'main:delete_comment' post.id comment.id%}">댓글 삭제하기</a>
         <hr>
         </div>
     {% endfor %}
