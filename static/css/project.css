@@ -1,0 +1,16 @@
+* {
+    color : black;
+}
+
+.logo {
+    text-align: center;
+    width : 100px;
+    height : 150px;
+    object-fit: contain;
+}
+
+.profile_img {
+    text-align: center;
+    width : 100%;
+    position : relative;
+}
