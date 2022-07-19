@@ -1,7 +1,9 @@
-
+{% load static %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'main:showmain' %}">동대 멋사 10기♥</a>
+    <a class="navbar-brand" href="{% url 'main:showmain' %}">
+      <img src="{% static 'images/insta_logo.png' %}" alt="" class="logo" width="100px">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,7 +37,7 @@
           {% endif %}
         </ul>
       </li>
-
+      <a href="{%url 'main:new'%}">글쓰기</a>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>

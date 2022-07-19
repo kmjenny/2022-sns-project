@@ -14,54 +14,72 @@
 
     {% include 'shared/_navbar.html' %}
 
+    <div class="profile">
+        <div class="profile_image" style="background: #BDBDBD;">
+            <img src="{% static 'images/profile.jpg' %}" alt="" class="profile_img">
+        </div>
+        <div class="profile_content">
+            <p class="id">_jaennyy</p>
+            <p class="Posts">게시물 3</p>
+            <p class="Followers">팔로워 337</p>
+            <p class="Following">팔로우 460</p>
+            <p class="name"><a href="{% url 'main:showpage' %}">김재니</a></p>
+            <p><a href="https://blog.naver.com/wosl3532/222663631440" class="website">https://blog.naver.com/wosl3532/222663631440</a></p>
+        </div>
+    </div>
+    <div class="highlight">
+        <a href="https://www.instagram.com/stories/highlights/17918929415123834/">
+            <div class="highlight1">
+                <img src="{% static 'images/light1.jpg' %}" alt="" class="light1">
+                <p class="li">🖤</p>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/stories/highlights/17950467358609561/">
+            <div class="highlight2">
+                <img src="{% static 'images/light2.jpg' %}" alt="" class="light2">
+                <p class="li">✔️</p>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/stories/highlights/17937500261060827/">
+            <div class="highlight3">
+                <img src="{% static 'images/light3.jpg' %}" alt="" class="light3">
+                <p class="li">💣</p>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/stories/highlights/17929163005958574/">
+            <div class="highlight4">
+                <img src="{% static 'images/light4.jpg' %}" alt="" class="light4">
+                <p class="li">👓</p>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/stories/highlights/17906766659304701/">
+            <div class="highlight5">
+                <img src="{% static 'images/light5.jpg' %}" alt="" class="light5">
+                <p class="li">🕶</p>
+            </div>
+        </a>
+    </div>
+    <div class="Post">
+        <a href="https://www.instagram.com/p/CfT2WC_FEUJ/">
+            <div class="Post1">
+                <img src="{% static 'images/post1.jpg' %}" alt="" class="post1">
+            </div>
+        </a>
+        <a href="https://www.instagram.com/p/CfUCOC5lKE0/">
+            <div class="Post2">
+                <img src="{% static 'images/post2.jpg' %}" alt="" class="post2">
+            </div>
+        </a>
+        <a href="https://www.instagram.com/p/CdkWmErA-m4/">
+            <div class="Post3">
+                <img src="{% static 'images/post3.jpg' %}" alt="" class="post3">
+            </div>
+        </a>
+    </div>
+
     <div class="container">
         {% block content %}
 
         {% endblock %}
-    </div>
-    <div class="top-bar">
-        <img src="{% static 'images/insta_logo.png' %}" alt="" class="logo" width="500px">
-    </div>
-    <div class="profile">
-        <img src="{% static 'images/profile.jpg' %}" alt="" class="profile_img">
-        <p class="id">_jaennyy</p>
-        <p class="Posts">게시물 2</p>
-        <p class="Followers">팔로워 337</p>
-        <p class="Following">팔로우 460</p>
-        <p class="name">김재니</p>
-        <p><a href="https://blog.naver.com/wosl3532/222663631440" class="website">https://blog.naver.com/wosl3532/222663631440</a></p>
-    </div>
-    <div class="highlight">
-        <div class="highlight1">
-            <img src="{% static 'images/light1.jpg' %}" alt="">
-            <p>🖤</p>
-        </div>
-        <div class="highlight2">
-            <img src="{% static 'images/light2.jpg' %}" alt="">
-            <p>✔️</p>
-        </div>
-        <div class="highlight3">
-            <img src="{% static 'images/light3.jpg' %}" alt="">
-            <p>💣</p>
-        </div>
-        <div class="highlight4">
-            <img src="{% static 'images/light4.jpg' %}" alt="">
-            <p>👓</p>
-        </div>
-        <div class="highlight5">
-            <img src="{% static 'images/light5.jpg' %}" alt="">
-            <p>🕶</p>
-        </div>
-    </div>
-    <div class="Post">
-        <div class="Post1">
-            <img src="{% static 'images/post1.jpg' %}" alt="">
-        </div>
-        <div class="Post2">
-            <img src="{% static 'images/post2.jpg' %}" alt="">
-        </div>
-        <div class="Post3">
-            <img src="{% static 'images/post3.jpg' %}" alt="">
-        </div>
     </div>
 </body>
