@@ -2,8 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <p style="font-weight:bold;">🐳 내 싫어요 목록 🐳</p>
+    <p style="font-weight:bold;">🐳 내 싫어요 목록 🐳</p>
         <div class="row">
             {% for dislike in dislike_list %}
                 <div class="col-md-3 col-6 item_list__card">
@@ -26,5 +25,4 @@
                 </div>
             {% endfor %}
         </div>
-    </div>
 {% endblock content %}
