@@ -1,5 +1,9 @@
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
+.parent{
+    position: relative;
+}
+
 .profile{
     top : 180px;
     margin-left: 500px;
@@ -76,7 +80,6 @@
 }
 
 .container{
-    position:absolute;
-    margin-left: 85%;
-    top: 110px;
+    position: absolute;
+    bottom: 0%;
 }

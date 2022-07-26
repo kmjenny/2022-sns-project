@@ -1,3 +1,85 @@
-* {
-    color : black;
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+.parent{
+    position: relative;
+}
+
+.profile{
+    top : 180px;
+    margin-left: 500px;
+    position: absolute;
+}
+
+.profile_image{
+    width: 200px;
+    height: 200px;
+    border-radius: 70%;
+    overflow : hidden;
+    float: left;
+}
+
+.profile_content{
+    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: large;
+}
+
+.id{
+    font-size: x-large;
+}
+
+.profile_img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.highlight{
+    top: 480px;
+    width: 2000px;
+    margin-left: 25%;
+    position: absolute;
+}
+
+.highlight1, .highlight2, .highlight3, .highlight4, .highlight5{
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    overflow: hidden;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.light1, .light2, .light3, .light4, .light5{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.Post{
+    width: 1320px;
+    top: 700px;
+    margin-left: 17%;
+    position: absolute;
+}
+
+.Post1, .Post2, .Post3{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.post1, .post2, .post3{
+    width: 100%;
+    height: 100%;
+    object-fit : cover;
+}
+
+.container{
+    position: absolute;
+    bottom: 0%;
 }
