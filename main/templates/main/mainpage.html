@@ -1,26 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
-
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/project3.css' %}">
 {% block content %}
 
 {% if user.is_authenticated %}
-    <p>Post List</p>
+    <h3 class="postlist"><b>Post List</b></h3>
     <div>
         {% for post in posts %}
         <div>
-            <h3>{{post.title}}</h3>
-            {% if post.user %}
-                {% if 'user' in post.user.username %}
-                    <h3>작성자 : {{ post.user.last_name }} {{post.user.first_name }}</h3>
-                {% else %}
-                    <h3>작성자 : {{ post.user }}</h3>
-                {% endif %}
+            {% if post.image %}
+                <div class="post_image">
+                    <div class="image_div">
+                        <a href="{%url 'main:detail' post.id %}"><img class="images" src="{{ post.image.url }}" alt="사진" height="400px" width="400px"></a>
+                    </div>
+                </div>
             {% else %}
-                <h3>작성자 : 알 수 없음</h3>
+                <h3>{{post.title}}</h3>
             {% endif %}
-
-            {{post.summary}}
-            <a href="{%url 'main:detail' post.id %}">...자세히</a>
             <br>
         </div>
         {%endfor%}

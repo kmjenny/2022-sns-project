@@ -80,6 +80,6 @@
 }
 
 .container{
-    position: absolute;
-    bottom: 0%;
+    position: relative;
+    top: 1150px;
 }

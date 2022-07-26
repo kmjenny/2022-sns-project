@@ -1,5 +1,7 @@
 from django.urls import path
 from .views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 app_name = "main"
 urlpatterns = [
@@ -20,4 +22,4 @@ urlpatterns = [
     path('my_like/<int:user_id>', my_like, name="my_like"),
     path('dislike_toggle/<int:post_id>', dislike_toggle, name="dislike_toggle"),
     path('my_dislike/<int:user_id>', my_dislike, name="my_dislike"),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

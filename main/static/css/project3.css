@@ -1,0 +1,21 @@
+.post_image{
+    width: 1320px;
+    position: absolute;
+}
+
+.image_div{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.images{
+    width: 100%;
+    height: 100%;
+    object-fit : cover;
+}
+.postlist{
+    color: blue;
+}

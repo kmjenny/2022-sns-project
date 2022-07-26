@@ -3,22 +3,22 @@
 
 {% block content %}
 
-<h1>{{post.title}}</h1>
+<h3>{{post.title}}</h3>
 {% if post.user %}
     {% if 'user' in post.user.username %}
-        <h3>작성자 : {{ post.user.last_name }} {{ post.user.first_name }}</h3>
+        <h5>작성자 : {{ post.user.last_name }} {{ post.user.first_name }}</h5>
     {% else %}
-        <h3>작성자 : {{ post.user }}</h3>
+        <h5>작성자 : {{ post.user }}</h5>
     {% endif %}
 {% else %}
- <h3>작성자 : 알 수 없음</h3>
+ <h5>작성자 : 알 수 없음</h5>
 {% endif %}
 
 
 날짜 : {{post.pub_date}}
 <hr>
 {% if post.image %}
-    <p><img src="{{ post.image.url }}" alt="사진"></p>
+    <p><img src="{{ post.image.url }}" alt="사진" height="400px" width="400px"></p>
 {% endif %}
 <p>{{post.body}}</p>
 
