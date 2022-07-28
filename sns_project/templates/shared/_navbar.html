@@ -31,7 +31,7 @@
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           {% if user.is_authenticated %}
           <li><a class="dropdown-item" href="{% url 'account_logout' %}">로그아웃</a></li>
-          <li><a class="dropdown-item" href="{% url 'users:mypage' %}">Mypage</a></li>
+          <li><a class="dropdown-item" href="{% url 'users:mypage' request.user.id %}">Mypage</a></li>
           <li><a class="dropdown-item" href="{% url 'main:my_like' request.user.id %}">내 좋아요 목록</a></li>
           <li><a class="dropdown-item" href="{% url 'main:my_dislike' request.user.id %}">내 싫어요 목록</a></li>
           {% else %}

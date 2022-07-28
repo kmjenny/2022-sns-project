@@ -2,29 +2,27 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <p style="font-weight:bold;">🐳 내 좋아요 목록 🐳</p>
-        <div class="row">
-            {% for like in like_list %}
-                <div class="col-md-3 col-6 item_list__card">
-                    <div class="card">
-                        {% if like.post.image %}
-                            <a href="#">
-                                <img src="{{ like.post.image.url }}" width="100%" height="300px" alt="...">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">{{ like.post.title }}</h5>
-                                <a href="{% url 'main:detail' like.post.pk %}" class="btn btn-outline-primary">보러가기</a>
-                               </div>
-                        {% else %}
-                            <div class="card-body">
-                                <h5 class="card-title">{{ like.post.title }}</h5>
-                                <a href="{% url 'main:detail' like.post.pk %}" class="btn btn-outline-primary">보러가기</a>
-                            </div>
-                        {% endif %}
+<p style="font-weight:bold;">🐳 내 좋아요 목록 🐳</p>
+<div class="row">
+    {% for like in like_list %}
+        <div class="col-md-3 col-6 item_list__card">
+            <div class="card">
+                {% if like.post.image %}
+                    <a href="#">
+                        <img src="{{ like.post.image.url }}" width="100%" height="300px" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ like.post.title }}</h5>
+                        <a href="{% url 'main:detail' like.post.pk %}" class="btn btn-outline-primary">보러가기</a>
+                       </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ like.post.title }}</h5>
+                        <a href="{% url 'main:detail' like.post.pk %}" class="btn btn-outline-primary">보러가기</a>
                     </div>
-                </div>
-            {% endfor %}
+                {% endif %}
+            </div>
         </div>
-    </div>
+    {% endfor %}
+</div>
 {% endblock content %}
